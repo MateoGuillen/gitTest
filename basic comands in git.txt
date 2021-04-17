@@ -1,0 +1,73 @@
+//TUTORIAL GIT
+
+------Instalar Git en Ubuntu----------
+$ sudo apt install git
+
+//para verificar que se instalo
+$ git --version
+
+//Establezca su nombre de usuario y correo electrónico global. 
+$ git config --global user.name "tuUsurioGlobal"
+$ git config --global user.email "tuEmail@email.com"
+
+//para verificar que se efectuaron los cambio de name;email
+$ git config --list
+
+------Comandos Basicos Para empezar-----
+
+//crear un proyecto nuevo o modificar un proyecto existente
+git init
+
+//para pasar los archivos del working directory al staging area
+git add <file>
+
+//en que estado estan tus archivos WD,SA,repository
+git status
+
+//para pasar los archivos del staging area al repository
+//para crear una primera snapshot de tu codigo
+//al ejecutar se debe documentar escribiendo un mensaje de lo que se cambio por ejemplo
+git commnit -m "elMensaje"
+
+//para subir tu codigo para que otros desarrolladores puedan acceder
+git push
+
+//muestra los cambios que los otros desarrolladores han hecho
+git pull
+
+//hace una copia desde el servidor a la pc local, para que se pueda trabajar
+git clone
+
+//para ver los cambios efectuados al archivo <file>, 
+//resaltado en rojo aparace lo que habia anteriormente y en verde aparece lo que hay actualmente
+git diff <file>
+g
+//para ver todas la commints
+git log
+
+
+//PARA QUE GIT IGNORE ALGUNAS CARPETAS O ARCHIVOS
+//SE CREA UN ARHIVO CON NOMBRE______>>>  .gitignore
+//EN EL ARCHIVO SE ESCRIBE el nombre de las carpetas y arhivos a ser ignorados
+
+//en la carpeta raiz del proyecto crear .gitignore
+$touch .gitignore
+//agregar el .gitignore
+git add .gitignore
+
+
+//para ver todas las versiones del programa
+git branch
+
+//para crear una nueva version( una nueva rama, new branch) del programa
+git branch v2.0
+
+//para moverse a la version v2.0 del programa
+git checkout v2.0
+
+//para agregar todos los archivos al staging area
+git add .
+
+
+
+///GIT IGNORA LAS CARPETAS VACIAS
